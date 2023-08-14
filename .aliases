@@ -1,0 +1,29 @@
+# fzf
+alias preview="fzf --preview='bat --color=always --style=numbers --theme OneHalfDark {}' --preview-window=down"
+
+alias pg="ping google.com"
+
+#Largest Files
+alias largefile="du -h -x -s -- * | sort -r -h | head -20"
+
+alias ls="exa --icons"
+alias la="exa --icons -lgha --group-directories-first"
+alias lt="exa --icons --tree"
+alias lta="exa --icons --tree -lgha"
+alias bat="bat --theme OneHalfDark"
+alias cat="bat --theme OneHalfDark -p $@"
+
+alias refresh="source ~/.zshrc"
+alias unsource="exec $SHELL -l"
+
+alias zshconf="nvim ~/.zshrc"
+alias bashconf="nvim ~/.bashrc"
+
+#git
+alias gitgraph="git log --all --decorate --oneline --graph"
+alias gitupdate="git fetch && git pull"
+alias gitstat="git status"
+alias gitad="git add $@"
+alias gitcom="git commit -m '$@'"
+
+alias doService="sudo systemctl $@"

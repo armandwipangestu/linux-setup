@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEPENDENCY_PACKAGES=(
-    "git" "fzf" "zsh"
+    "git" "fzf" "zsh" "bat" "exa"
 )
 
 function installDependencyPackage() {
