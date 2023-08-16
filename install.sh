@@ -16,6 +16,7 @@ function main() {
     cloneRepositoryZsh
     installCustomThemes
     installDotfiles
+    utility
 
     echo -e "Change Shell to ZSH!"
     chsh -s $(which zsh)

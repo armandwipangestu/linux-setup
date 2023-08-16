@@ -2,6 +2,7 @@
 
 DEPENDENCY_PACKAGES=(
     "git" "fzf" "zsh" "bat" "exa"
+    "neofetch"
 )
 
 function installDependencyPackage() {

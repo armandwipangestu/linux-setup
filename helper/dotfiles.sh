@@ -17,3 +17,12 @@ function installDotfiles() {
         cp $(pwd)/"${DOTFILE}" "$HOME"
     done
 }
+
+function utility() {
+  if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+  fi
+
+  cp -R $(pwd)/.config/neofetch ~/.config/
+  touch $HOME/.hushlogin
+}
