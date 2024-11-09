@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEPENDENCY_PACKAGES=(
-    "git" "fzf" "zsh" "bat" "exa"
+    "git" "fzf" "zsh" "bat" "eza"
     "neofetch"
 )
 
