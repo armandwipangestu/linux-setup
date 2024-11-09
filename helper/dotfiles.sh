@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTFILES=(
-    ".zshrc" ".aliases" ".tmux.conf"
+    ".zshrc" ".aliases" ".autostart" ".tmux.conf"
 )
 
 function installDotfiles() {
