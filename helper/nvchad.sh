@@ -13,7 +13,7 @@ function installNvChad() {
         sudo apt-get install "${NVCHAD_DEPENDENCY_PACKAGES[i]}" -y
     done
 
-    echo -e "\nCloning: https://github.com/NvChad/NvChad.git > ~/.config/nvim\n"
-    git clone https://github.com/NvChad/NvChad.git ~/.config/nvim
+    echo -e "\nCloning: https://github.com/NvChad/starter > ~/.config/nvim\n"
+    git clone https://github.com/NvChad/starter ~/.config/nvim
     nvim
 }
