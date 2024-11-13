@@ -18,6 +18,7 @@ alias unsource="exec $SHELL -l"
 
 alias zshconf="nvim ~/.zshrc"
 alias bashconf="nvim ~/.bashrc"
+alias aliasconf="nvim ~/.aliases"
 
 #git
 alias gitgraph="git log --all --decorate --oneline --graph"
