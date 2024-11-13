@@ -2,7 +2,7 @@
 
 DEPENDENCY_PACKAGES=(
     "git" "fzf" "zsh" "bat" "eza"
-    "neofetch" "tmux"
+    "neofetch" "tmux" "xclip"
 )
 
 function installDependencyPackage() {
