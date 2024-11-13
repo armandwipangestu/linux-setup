@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HELPERS=(
-    "packages" "zsh" "dotfiles"
+    "packages" "clone" "dotfiles"
     "nvchad"
 )
 
