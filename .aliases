@@ -6,10 +6,16 @@ alias pg="ping google.com"
 #Largest Files
 alias largefile="du -h -x -s -- * | sort -r -h | head -20"
 
-alias ls="eza --icons"
+# alias ls="eza --icons"
+# alias la="eza --icons -lgha --group-directories-first"
+# alias lt="eza --icons --tree"
+# alias lta="eza --icons --tree -lgha"
+
+alias ls="eza -lah --git --icons=always $@"
 alias la="eza --icons -lgha --group-directories-first"
-alias lt="eza --icons --tree"
+alias lt="eza -h --icons --tree"
 alias lta="eza --icons --tree -lgha"
+
 alias bat="bat --theme OneHalfDark"
 alias cat="bat --theme OneHalfDark -p $@"
 
