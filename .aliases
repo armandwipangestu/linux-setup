@@ -34,3 +34,6 @@ alias gitad="git add $@"
 alias gitcom="git commit -m '$@'"
 
 alias doService="sudo systemctl $@"
+
+alias nmap-unassigned-ip="nmap -sP -PR $@"
+alias nmap-port-scan="nmap -Pn -sV $@"
