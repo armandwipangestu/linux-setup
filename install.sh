@@ -19,7 +19,7 @@ function main() {
     utility
 
     echo -e "Change Shell to ZSH!"
-    chsh -s $(which zsh)
+    sudo chsh -s $(which zsh) "$USER"
 
     read -p "Install Neovim with NvChad? [y/n] " SWITCH_CASE
 
