@@ -3,7 +3,7 @@
 DEPENDENCY_PACKAGES=(
     "git" "fzf" "zsh" "bat" "eza"
     "neofetch" "tmux" "xclip" "nmap"
-    "ncdu"
+    "ncdu" "btop"
 )
 
 function installDependencyPackage() {
