@@ -11,7 +11,8 @@ done
 
 function main() {
     echo -e "Running: Update & Upgrade\n"
-    sudo apt update && sudo apt upgrade
+    #sudo apt update && sudo apt upgrade
+    sudo apt update
     installDependencyPackage
     cloneRepositoryZsh
     installCustomThemes
