@@ -37,5 +37,3 @@ alias doService="sudo systemctl $@"
 
 alias nmap-unassigned-ip="nmap -sP -PR $@"
 alias nmap-port-scan="nmap -Pn -sV $@"
-
-alias largefile="du -h -x -s -- * | sort -r -h | head -20"
