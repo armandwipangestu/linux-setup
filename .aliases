@@ -16,8 +16,8 @@ alias la="eza --icons -lgha --group-directories-first"
 alias lt="eza -h --icons --tree"
 alias lta="eza --icons --tree -lgha"
 
-alias bat="bat --theme OneHalfDark"
-alias cat="bat --theme OneHalfDark -p $@"
+alias bat="batcat --theme OneHalfDark"
+alias cat="batcat --theme OneHalfDark -p $@"
 
 alias refresh="source ~/.zshrc"
 alias unsource="exec $SHELL -l"
