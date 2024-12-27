@@ -23,6 +23,6 @@ function utility() {
     mkdir ~/.config
   fi
 
-  cp -R $(pwd)/.config/neofetch ~/.config/
+  #cp -R $(pwd)/.config/neofetch ~/.config/
   touch $HOME/.hushlogin
 }
