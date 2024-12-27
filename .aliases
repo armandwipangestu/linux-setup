@@ -37,3 +37,5 @@ alias doService="sudo systemctl $@"
 
 alias nmap-unassigned-ip="nmap -sP -PR $@"
 alias nmap-port-scan="nmap -Pn -sV $@"
+
+alias mc="minio-client"
