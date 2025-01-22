@@ -111,8 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-zstyle ':autocomplete:*' default-context history-incremental-search-backward
-zstyle ':autocomplete:history-incremental-search-backward:*' min-input 1
+# Prediction List View
+#zstyle ':autocomplete:*' default-context history-incremental-search-backward
+#zstyle ':autocomplete:history-incremental-search-backward:*' min-input 1
 
 source ~/.aliases
 source ~/.autostart
