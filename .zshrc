@@ -78,7 +78,7 @@ plugins=(
   git zsh-autosuggestions
   zsh-syntax-highlighting
   bgnotify zsh-fzf-history-search
-  zsh-autocomplete
+  #zsh-autocomplete
 )
 
 export EDITOR=/snap/bin/nvim
