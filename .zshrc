@@ -78,6 +78,7 @@ plugins=(
   git zsh-autosuggestions
   zsh-syntax-highlighting
   bgnotify zsh-fzf-history-search
+  #zsh-autocomplete
 )
 
 export EDITOR=/snap/bin/nvim
@@ -109,5 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Prediction List View
+#zstyle ':autocomplete:*' default-context history-incremental-search-backward
+#zstyle ':autocomplete:history-incremental-search-backward:*' min-input 1
+
 source ~/.aliases
 source ~/.autostart

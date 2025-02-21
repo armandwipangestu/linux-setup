@@ -5,6 +5,7 @@ REPOSITORY_LINK=(
     "https://github.com/zsh-users/zsh-syntax-highlighting"
     "https://github.com/zsh-users/zsh-autosuggestions"
     "https://github.com/joshskidmore/zsh-fzf-history-search"
+    "https://github.com/marlonrichert/zsh-autocomplete"
     "https://github.com/jimeh/tmux-themepack"
 )
 
@@ -17,6 +18,7 @@ REPOSITORY_PATH=(
     "${OMZ_CUSTOM_PLUGIN_PATH}/zsh-syntax-highlighting"
     "${OMZ_CUSTOM_PLUGIN_PATH}/zsh-autosuggestions"
     "${OMZ_CUSTOM_PLUGIN_PATH}/zsh-fzf-history-search"
+    "${OMZ_CUSTOM_PLUGIN_PATH}/zsh-autocomplete"
     "$HOME/.tmux-themepack"
 )
 
