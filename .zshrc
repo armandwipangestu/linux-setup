@@ -82,6 +82,7 @@ plugins=(
 )
 
 export EDITOR=/snap/bin/nvim
+DISABLE_AUTO_UPDATE=true
 
 source $ZSH/oh-my-zsh.sh
 
