@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function logging() {
+function log() {
     NAME=$1
     LEVEL=$2
     MESSAGE=$3
