@@ -24,7 +24,7 @@ REPOSITORY_PATH=(
 
 function cloneRepositoryZsh() {
     for ((i = 0; i < ${#REPOSITORY_LINK[@]}; i++)); do
-        echo -e "\nCloning: ${REPOSITORY_LINK[i]} > ${REPOSITORY_PATH[i]}\n"
+        log "script" "INFO" "Cloning repository '${REPOSITORY_LINK[i]}' to '${REPOSITORY_PATH[i]}'"
         git clone "${REPOSITORY_LINK[i]}" "${REPOSITORY_PATH[i]}"
     done
 }

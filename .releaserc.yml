@@ -1,57 +1,59 @@
 branches:
-  - name: main
+    - name: main
+    - name: staging
+      prerelease: rc
 
 tagFormat: v${version}
 
 plugins:
-  - - "@semantic-release/commit-analyzer"
-    - preset: conventionalcommits
-      releaseRules:
-        # MAJOR changes
-        - breaking: true
-          release: major
+    - - "@semantic-release/commit-analyzer"
+      - preset: conventionalcommits
+        releaseRules:
+            # MAJOR changes
+            - breaking: true
+              release: major
 
-        # MINOR changes
-        - type: feat
-          release: minor
+            # MINOR changes
+            - type: feat
+              release: minor
 
-        # PATCH changes
-        - type: fix
-          release: patch
-        - type: hotfix
-          release: patch
-        - type: perf
-          release: patch
-        - type: refactor
-          release: patch
+            # PATCH changes
+            - type: fix
+              release: patch
+            - type: hotfix
+              release: patch
+            - type: perf
+              release: patch
+            - type: refactor
+              release: patch
 
-        # NO release
-        - type: docs
-          release: false
-        - type: style
-          release: false
-        - type: test
-          release: false
-        - type: ci
-          release: false
-      parserOpts:
-        noteKeywords:
-          - BREAKING CHANGE
+            # NO release
+            - type: docs
+              release: false
+            - type: style
+              release: false
+            - type: test
+              release: false
+            - type: ci
+              release: false
+        parserOpts:
+            noteKeywords:
+                - BREAKING CHANGE
 
-  - "@semantic-release/release-notes-generator"
+    - "@semantic-release/release-notes-generator"
 
-  - - "@semantic-release/changelog"
-    - changelogFile: CHANGELOG.md
+    - - "@semantic-release/changelog"
+      - changelogFile: CHANGELOG.md
 
-  - - "@semantic-release/git"
-    - assets:
-        - CHANGELOG.md
-        - package.json
-      message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    - - "@semantic-release/git"
+      - assets:
+            - CHANGELOG.md
+            - package.json
+        message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 
-  - - "@semantic-release/github"
-    - successComment: false
-      labels: false
+    - - "@semantic-release/github"
+      - successComment: false
+        labels: false
 
-  - - "@semantic-release/exec"
-    - successCmd: 'echo "${nextRelease.version}" > version.txt'
+    - - "@semantic-release/exec"
+      - successCmd: 'echo "${nextRelease.version}" > version.txt'
