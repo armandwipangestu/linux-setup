@@ -13,7 +13,7 @@ function installDotfiles() {
           sudo ln -s /usr/bin/batcat ~/.local/bin/bat
         fi
 
-        echo -e "\nCopy: $(pwd)/""${DOTFILE}"" > ""${HOME}""\n"
+        log "script" "INFO" "Copying '$(pwd)/${DOTFILE}' to '${HOME}'"
         cp $(pwd)/"${DOTFILE}" "$HOME"
     done
 }

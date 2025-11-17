@@ -14,7 +14,7 @@ for arg in "$@"; do
 done
 
 HELPERS=(
-    "packages" "clone" "dotfiles"
+    "logging" "packages" "clone" "dotfiles"
     "nvchad"
 )
 
@@ -23,7 +23,7 @@ for HELPER in "${HELPERS[@]}"; do
 done
 
 function main() {
-    echo -e "Running: Update & Upgrade\n"
+    log "script" "INFO" "Running: Update & Upgrade"
     #sudo apt update && sudo apt upgrade
     sudo apt update
     installDependencyPackage
@@ -32,7 +32,7 @@ function main() {
     installDotfiles
     utility
 
-    echo -e "Change Shell to ZSH!"
+    log "script" "INFO" "Change Shell to ZSH!"
     sudo chsh -s $(which zsh) "$USER"
 
     if [ "$SKIP_INTERACTION" = true ]; then
@@ -53,7 +53,7 @@ function main() {
         ;;
     esac
 
-    echo -e "\nInstallation Done :)\n"
+    log "script" "INFO" "Installation Done!"
 }
 
 main
