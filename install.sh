@@ -1,5 +1,6 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKIP_INTERACTION=false
 
 for arg in "$@"; do
@@ -19,7 +20,7 @@ HELPERS=(
 )
 
 for HELPER in "${HELPERS[@]}"; do
-    source $(pwd)/helper/"${HELPER}".sh
+    source "${SCRIPT_DIR}/helper/${HELPER}.sh"
 done
 
 function main() {
