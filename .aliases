@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # fzf
 alias preview="fzf --preview='bat --color=always --style=numbers --theme OneHalfDark {}' --preview-window=down"
 
@@ -30,6 +32,7 @@ alias unsource="exec $SHELL -l"
 alias zshconf="nvim ~/.zshrc"
 alias bashconf="nvim ~/.bashrc"
 alias aliasconf="nvim ~/.aliases"
+alias startconf="nvim ~/.autostart"
 
 #git
 alias gitgraph="git log --all --decorate --oneline --graph"
@@ -45,3 +48,5 @@ alias nmap-port-scan="nmap -Pn -sV $@"
 alias nmap-udp-scan="sudo nmap -sU -p $@"
 
 alias mc="minio-client"
+
+alias repo="cd ~/Documents/Repository"
