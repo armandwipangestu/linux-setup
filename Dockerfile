@@ -31,7 +31,6 @@ WORKDIR /home/dev
 
 # 3. Copy dotfiles
 COPY . /home/dev/.dotfiles
-RUN chmod -R 755 /home/dev/.dotfiles
 
 # 4. Run the installer script
 RUN /home/dev/.dotfiles/install.sh --skip-interaction
