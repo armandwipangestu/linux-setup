@@ -1,0 +1,31 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (kalau ada semantic-release)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Docker related
+*.tar
+*.img
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Shell-local
+*.swp
+*.swo
+
+# Temp files
+tmp/
+temp/
+
+# Build artifacts
+version.txt
+dist/

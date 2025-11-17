@@ -1,0 +1,58 @@
+name: PR Build & Test
+
+on:
+    pull_request:
+        branches:
+            - staging
+            - main
+        types:
+            - opened
+            - synchronize
+            - reopened
+
+jobs:
+    build-and-test:
+        name: Build and Test Docker Image
+        runs-on: ubuntu-latest
+        environment: ${{ github.base_ref }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up QEMU (optional, for multi-arch build testing)
+              uses: docker/setup-qemu-action@v2
+
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v3
+
+            - name: Build Docker image (PR only, no push)
+              run: |
+                  docker build \
+                    --build-arg APP_VERSION=pr-${{ github.event.number }} \
+                    -t pr-linux-setup:${{ github.sha }} \
+                    .
+
+            - name: Test basic commands inside container
+              run: |
+                  # Start container in background
+                  CONTAINER=$(docker run -d pr-linux-setup:${{ github.sha }} tail -f /dev/null)
+
+                  echo "Checking zsh installed..."
+                  docker exec $CONTAINER zsh --version || exit 1
+
+                  echo "Checking dotfiles folder..."
+                  docker exec $CONTAINER test -d /home/dev/.dotfiles || exit 1
+
+                  echo "Running neofetch..."
+                  docker exec $CONTAINER neofetch || echo "Neofetch works"
+
+                  echo "Check ZSH default shell..."
+                  docker exec $CONTAINER sh -c 'echo $SHELL'
+
+                  # Clean up
+                  docker stop $CONTAINER
+                  docker rm $CONTAINER
+
+            - name: Success message
+              run: echo "PR Build & Test passed!"

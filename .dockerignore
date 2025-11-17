@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# CI
+.github
+
+# Editor
+.vscode
+.idea
+
+# Node
+node_modules
+npm-debug.log
+package-lock.json
+
+# MacOS
+.DS_Store
+
+# Local temp
+tmp
+temp
+
+# Logs
+*.log
+
+# Artifacts
+version.txt
+dist
+
+# Markdown/docs yang tidak perlu di dalam image
+README.md
+LICENSE

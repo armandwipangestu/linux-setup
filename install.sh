@@ -1,5 +1,18 @@
 #!/bin/bash
 
+SKIP_INTERACTION=false
+
+for arg in "$@"; do
+    case $arg in
+        --skip-interaction|-y)
+            SKIP_INTERACTION=true
+            shift
+            ;;
+        *)
+            ;;
+    esac
+done
+
 HELPERS=(
     "packages" "clone" "dotfiles"
     "nvchad"
@@ -22,7 +35,11 @@ function main() {
     echo -e "Change Shell to ZSH!"
     sudo chsh -s $(which zsh) "$USER"
 
-    read -p "Install Neovim with NvChad? [y/n] " SWITCH_CASE
+    if [ "$SKIP_INTERACTION" = true ]; then
+        SWITCH_CASE="y"
+    else
+        read -r -p "Install Neovim with NvChad? [y/n] " SWITCH_CASE
+    fi
 
     case "$SWITCH_CASE" in
     y | Y)
