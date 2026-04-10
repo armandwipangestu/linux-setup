@@ -1,3 +1,10 @@
+# [1.2.0-rc.1](https://github.com/armandwipangestu/linux-setup/compare/v1.1.0...v1.2.0-rc.1) (2026-04-10)
+
+
+### Features
+
+* add glances package ([301d2ec](https://github.com/armandwipangestu/linux-setup/commit/301d2ecbf91a6a354c98eae578bfdc723723037b))
+
 # [1.1.0-rc.3](https://github.com/armandwipangestu/linux-setup/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2026-04-10)
 
 
